@@ -1,0 +1,26 @@
+h1{
+    color: red;
+    font-size: 40px;
+}
+/* id selector */
+#firstheading{
+    color: blue;
+}
+/* class selector */
+.brown{
+    color: brown;       
+}
+
+.box{
+    /* width: 400px;
+    height: 400px;
+    background-color: purple;
+    padding: 25px;  */
+
+    padding: 24px 48px;
+    border: 2px solid;
+} 
+p{
+    font-size: 2em;
+}
+/* use px or rem for font sizes */
