@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity and Semantic HTML</title>
+    <style>
+        p{
+            color: aquamarine !important;
+        }
+        /* due to !important it will override everything else */
+        .class-level{
+            color: coral;
+        }
+
+        /* here .class-level will have a higher priority than p */
+
+        #id-level{
+            color: palevioletred;
+        }
+        /* id has the higher priority */
+        /* inline styling has the highest priority*/
+
+        .box{
+            width: 400px;
+            height: 400px;
+            padding: 16px;
+            background-color: coral;
+        }
+
+        .child{
+            box-sizing: border-box;
+            width: 100%;
+            background-color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <p id="id-level" class="class-level">this is a para for testing specificity</p>
+
+    
+    <div class="box">
+        <div class="box child"></div>
+        <span>This is a span</span>
+    </div>
+</body>
+</html>
