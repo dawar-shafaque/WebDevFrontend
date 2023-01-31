@@ -18,8 +18,19 @@ header{
 
 header nav >a{
     margin: 16px;
-
+    text-decoration: none;
+    padding: 8px;
 }
+
+header nav >a:hover{
+    text-decoration: underline;
+    /* background-color: hsl(0deg 0% 50% / 48%); */
+}
+
+
+/* header nav >a:visited{
+    color: royalblue;
+} */
 
 footer{
     padding: 16px;
@@ -91,6 +102,10 @@ form#contact{
 #contact label{
     display: block;
     font-weight: 600;
+}
+
+#contact input:focus{
+    outline: 2px solid green;
 }
 
 #contact input, #contact textarea, #contact button{

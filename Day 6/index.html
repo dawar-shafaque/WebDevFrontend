@@ -34,12 +34,20 @@
             width: 100%;
             background-color: royalblue;
         }
+        p::after{
+            content:"♦️";
+            color: indianred;
+        }
+        p::before{
+            content:"♦️";
+            color: indianred;
+        }
     </style>
 </head>
 <body>
     <p id="id-level" class="class-level">this is a para for testing specificity</p>
 
-    
+
     <div class="box">
         <div class="box child"></div>
         <span>This is a span</span>
