@@ -14,6 +14,11 @@ body{
 
 header{
     padding: 16px;
+    position: sticky;
+    top: 0;
+    border: 1px solid white;
+    background-color: cornsilk;
+    border-bottom: 4px solid;
 }
 
 header nav >a{

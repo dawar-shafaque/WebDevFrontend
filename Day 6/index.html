@@ -1,76 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Specificity and Semantic HTML</title>
     <style>
-        /* p{
-            color: rgb(251, 8, 8) !important;
-        } */
-        /* due to !important it will override everything else */
-        /* .class-level{
-            color: coral;
-        } */
+      /* p{
+          color: rgb(251, 8, 8) !important;
+      } */
+      /* due to !important it will override everything else */
+      /* .class-level{
+          color: coral;
+      } */
 
-        /* here .class-level will have a higher priority than p */
+      /* here .class-level will have a higher priority than p */
 
-        /* id has the higher priority */
-        /* inline styling has the highest priority*/
-        
-        .box{
-            width: 400px;
-            height: 400px;
-            padding: 16px;
-            background-color: coral;
-        }
-        
-        .child{
-            box-sizing: border-box;
-            width: 100%;
-            background-color: royalblue;
-        }
-        
-        strong{
-            color: black;
-            position: relative;
-            top: 50px;
-        }
+      /* id has the higher priority */
+      /* inline styling has the highest priority*/
 
-        /* #id-level{
-            color: palevioletred;
-            position: absolute;
-            left: 50px;
-            top: 100px;
-        }    */                                                                                                                                                                                                                    p.absolute{ 
-            position: absolute;
-            top: 0;
-            /* right: 0;
-        }                                                                                                                                                                                                                                                                                                 */
+      .box {
+        width: 400px;
+        height: 400px;
+        padding: 16px;
+        background-color: coral;
+        position: absolute;
+        z-index: 2;
+      }
 
-        /* p::after{
-            content:"♦️";
-            color: indianred;
-        }
-        p::before{
-            content:"♦️";
-            color: indianred;
-        }
+      .child {
+        box-sizing: border-box;
+        width: 420px;
+        height: 400px;
+        background-color: royalblue;
+        position: absolute;
+        left: 40px;
+        z-index: 1;
+      }
 
-        input::placeholder{
-            color: brown;
-        } */
+      /* strong {
+        color: black;
+        position: relative;
+        top: 50px;
+      } */
+
+      /* #id-level{
+          color: palevioletred;
+          position: absolute;
+          left: 50px;
+          top: 100px;
+      }    */
+      /* p,absolute {
+        position: absolute; it will try to position itself relative to its parent container */
+        /* top: 0; */
+        /* right: 20%;
+      } */
+      /* section {
+        position: relative;
+        height: 200px;
+        width: 300px;
+        border: 1px solid;
+      } */
+
+      /* p::after{
+          content:"♦️";
+          color: indianred;
+      }
+      p::before{
+          content:"♦️";
+          color: indianred;
+      }
+
+      input::placeholder{
+          color: brown;
+      } */
     </style>
-</head>
-<body>
-    <p id="id-level" class="class-level">this is a <strong>para</strong> for testing specificity</p>
-    <p class="abs">Absolutely positioned para</p>
-    <!-- <input type="text" placeholder="this is a placeholder">
+  </head>
+  <body>
+    <!-- <p id="id-level" class="class-level">this is a <strong>para</strong> for testing specificity</p> -->
+    <!-- <section>
+      <p class="abs̥olute">Absolutely positioned para</p>
+    </section> -->
+    <!-- <input type="text" placeholder="this is a placeholder"> -->
 
-    <div class="box">
+    <div style="position: relative;">
+        <div class="box"></div>
         <div class="box child"></div>
-        <span>This is a span</span>
-    </div> -->
-</body>
+    </div>
+  </body>
 </html>
