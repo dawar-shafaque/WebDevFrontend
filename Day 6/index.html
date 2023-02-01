@@ -6,35 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Specificity and Semantic HTML</title>
     <style>
-        p{
-            color: aquamarine !important;
-        }
+        /* p{
+            color: rgb(251, 8, 8) !important;
+        } */
         /* due to !important it will override everything else */
-        .class-level{
+        /* .class-level{
             color: coral;
-        }
+        } */
 
         /* here .class-level will have a higher priority than p */
 
-        #id-level{
-            color: palevioletred;
-        }
         /* id has the higher priority */
         /* inline styling has the highest priority*/
-
+        
         .box{
             width: 400px;
             height: 400px;
             padding: 16px;
             background-color: coral;
         }
-
+        
         .child{
             box-sizing: border-box;
             width: 100%;
             background-color: royalblue;
         }
-        p::after{
+        
+        strong{
+            color: black;
+            position: relative;
+            top: 50px;
+        }
+
+        /* #id-level{
+            color: palevioletred;
+            position: absolute;
+            left: 50px;
+            top: 100px;
+        }    */                                                                                                                                                                                                                    p.absolute{ 
+            position: absolute;
+            top: 0;
+            /* right: 0;
+        }                                                                                                                                                                                                                                                                                                 */
+
+        /* p::after{
             content:"♦️";
             color: indianred;
         }
@@ -42,15 +57,20 @@
             content:"♦️";
             color: indianred;
         }
+
+        input::placeholder{
+            color: brown;
+        } */
     </style>
 </head>
 <body>
-    <p id="id-level" class="class-level">this is a para for testing specificity</p>
-
+    <p id="id-level" class="class-level">this is a <strong>para</strong> for testing specificity</p>
+    <p class="abs">Absolutely positioned para</p>
+    <!-- <input type="text" placeholder="this is a placeholder">
 
     <div class="box">
         <div class="box child"></div>
         <span>This is a span</span>
-    </div>
+    </div> -->
 </body>
 </html>
