@@ -20,10 +20,13 @@ header{
     background-color: cornsilk;
     border-bottom: 4px solid;
 }
+nav a{
+    text-decoration: none;
+
+}
 
 header nav >a{
     margin-right: 16px;
-    text-decoration: none;
 } 
 
 header nav >a:last-child{
@@ -32,9 +35,12 @@ header nav >a:last-child{
     margin-right: revert;
 }
 
-header nav >a:hover{
+nav >a:hover{
     text-decoration: underline;
-    /* background-color: hsl(0deg 0% 50% / 48%); */
+} 
+
+nav a:visited{
+    color: royalblue;
 }
 
 
@@ -86,7 +92,7 @@ th{
     padding: 8px;
 }
 td{
-    padding: 8px 0px 8px 140px;
+    padding: 8px 0px 8px 100px;
 }
 p{
     font-size: 1.5rem;
@@ -125,4 +131,73 @@ form#contact{
 }
 #contact-me{
     margin-top: 16px;
+}
+
+.mobile-nav{
+    display: none;
+}
+@media (width < 500px){
+    .default-nav{
+        display: none;
+    } 
+    .mobile-nav,section.menu{
+        display: revert;
+        
+    }
+
+    #menu-button{
+        display: block;
+        background: transparent;
+        border-radius: 8px;
+        margin-left: auto;
+    }
+    #table1{
+        width: 100%;
+    } 
+
+    th{
+        padding: 6px;
+    }
+    td{
+        padding: 5px 0px 8px 25px;
+    }
+
+    section.menu{
+        display: revert;
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        background: hsl(0, 0%, 100%);
+        transition: height .8s ease-in-out;
+        }
+    section.menu ul{
+        list-style: none;
+    }
+    section.menu ul > li{
+        margin-bottom: 16px;
+        font-size: 1.5rem;
+    }
+    section.menu nav{
+        margin-top: 48px;
+    }
+    #close-menu{
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        background: transparent;
+        font-size: x-large;
+        border: none;
+    }
+}
+
+@media (width<=450px){
+    #profile{
+        width: 100%;
+    }
+
+
+
 }

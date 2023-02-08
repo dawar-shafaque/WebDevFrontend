@@ -1,0 +1,52 @@
+body{
+    padding: 16px;
+}
+
+.box{
+    background-color: royalblue;
+    width: 300px;
+    height: 300px;
+    margin: 32px auto;
+    /* transition-property: transform;
+    transition-duration: .5s; */
+    /* transition-delay: 400ms; */
+    /* transition-timing-function: ease-in; */
+    /* transition-timing-function: cubic-bezier(0.55, 0.22, 0.58, 1); */
+    /* transition: transform .5s .4s cubic-bezier(0.55, 0.22, 0.58, 1), width .6s; */
+    animation: rotation 0.8s  infinite linear;               /*infinite is the number to times it will rotate */
+}
+
+
+/* .box:hover{
+    transform: scale(1.2);
+    width: 600px;
+} */
+
+/* @keyframes rotation {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+} */
+
+@keyframes rotation {
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+    75%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
